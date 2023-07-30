@@ -1,0 +1,1 @@
+/home/eatsoup/.config/home-manager/home.nix
