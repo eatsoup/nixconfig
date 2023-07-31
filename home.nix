@@ -22,6 +22,7 @@
     tmux
     python3
     thefuck
+    iconv
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
