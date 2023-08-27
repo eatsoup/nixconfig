@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    alacritty
+  ];
   programs.alacritty = {
     enable = true;
     settings = {
@@ -9,9 +12,17 @@
         "-c"
         "tmux attach || tmux"
       ];
-      window.opacity = 0.95;
       window = {
-        decorations = "none";
+        opacity = 0.95;
+        dimensions = {
+          columns = 133;
+          lines = 40;
+        };
+        # decorations = "none";
+        padding = {
+          x = 2;
+          y = 2;
+        };
       };
     };
   };

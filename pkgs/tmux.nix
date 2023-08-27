@@ -1,8 +1,14 @@
 { config, pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    tmux
+  ];
   programs.tmux = {
     enable = true;
     extraConfig = ''
+      # Set terminal color
+      set -g default-terminal xterm-256color
+
       # Start index of window/pane with 1, because we're humans, not computers
       set -g base-index 1
       setw -g pane-base-index 1

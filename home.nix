@@ -18,15 +18,18 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    alacritty
-    firefox
     git
+    git-crypt
+    gnupg
     iconv
+    direnv
     nodejs
     python3
     thefuck
-    tmux
+    gnumake
     openconnect
+    python310Packages.keyring
+    vpn-slice
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -51,11 +54,14 @@
   programs.autojump.enable = true;
 
   imports = [
-    ./pkgs/firefox.nix
-    ./pkgs/zsh.nix
-    ./pkgs/neovim.nix
-    ./pkgs/tmux.nix
     ./pkgs/alacritty.nix
+    ./pkgs/albert.nix
+    ./pkgs/firefox.nix
     ./pkgs/gnome.nix
+    ./pkgs/neovim.nix
+    ./pkgs/slack.nix
+    ./pkgs/tmux.nix
+    ./pkgs/vscode.nix
+    ./pkgs/zsh.nix
   ];
 }

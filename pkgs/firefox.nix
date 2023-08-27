@@ -2,10 +2,13 @@
 let
   nur = import (builtins.fetchTarball { 
     url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-    sha256 = "11v4ba0cjvfg7f1fk1x7azjrdhkxxr867bxqy7mss1bpsyxym06m";
+    # sha256 = "133ncv3sl4rs4zlwrfwm10k19jrzdvmgmjkhx4k9lk6p7g3p999";
   }) { inherit pkgs; };
 in
 {
+  home.packages = with pkgs; [
+    firefox
+  ];
   programs.firefox = {
     enable = true;
     profiles.default = {
