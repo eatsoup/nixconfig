@@ -18,11 +18,14 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    fzf
+    kubectl
+    kubelogin-oidc
     git
     git-crypt
     gnupg
+    jq
     iconv
-    direnv
     nodejs
     python3
     thefuck
@@ -30,6 +33,8 @@
     openconnect
     python310Packages.keyring
     vpn-slice
+    teams-for-linux
+    xclip
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -56,6 +61,7 @@
   imports = [
     ./pkgs/alacritty.nix
     ./pkgs/albert.nix
+    ./pkgs/direnv.nix
     ./pkgs/firefox.nix
     ./pkgs/gnome.nix
     ./pkgs/neovim.nix

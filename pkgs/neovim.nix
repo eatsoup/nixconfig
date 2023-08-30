@@ -34,10 +34,14 @@
 
       "Easy quotes life
       inoremap "" ""<left>
+      inoremap "<CR> {<CR>}<Esc>O<Tab>
       inoremap ''' '''<left>
       inoremap () ()<left>
+      inoremap (<CR> (<CR>)<Esc>O<Tab>
       inoremap {} {}<left>
+      inoremap {<CR> {<CR>}<Esc>O<Tab>
       inoremap [] []<left>
+      inoremap [<CR> [<CR>]<Esc>O<Tab>
       inoremap <> <><left>
       inoremap <C-a> <right>
       nmap <Leader>' ysiw'
@@ -47,6 +51,16 @@
       " Coc settings
       inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
       inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+
+      " $ in visual mode should jump one less
+      vnoremap $ $<left>
+
+      " Format raw json using jq
+      function! FormatJson()
+          %!jq .
+          let &syntax = "json"
+      endfunction
+      noremap <Leader>fj :call FormatJson()<cr>
     '';
   };
 }

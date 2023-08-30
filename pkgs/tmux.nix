@@ -15,6 +15,9 @@
 
       # Retain pwd
       bind c new-window -c "#{pane_current_path}"
+      bind '"' split-window -c "#{pane_current_path}"
+      bind % split-window -h -c "#{pane_current_path}"
+
       # Toggle mouse on with ^B m
       bind m set-option mouse\; display-message "Mouse is now #{?mouse,on,off}"
 
@@ -52,6 +55,11 @@
       # RMB for paste
       unbind-key MouseDown3Pane
       bind-key -n MouseDown3Pane run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+
+      # Set window title to current path
+      set-option -g status-interval 2
+      set-option -g automatic-rename on
+      set-option -g automatic-rename-format '#{b:pane_current_path}'
     '';
   };
 }

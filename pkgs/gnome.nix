@@ -19,17 +19,22 @@
       ];
     };
 
-    "org.gnome.settings-daemon.peripherals.touchpad" = {
+    "org/gnome/settings-daemon/peripherals/touchpad" = {
       natural-scroll = true;
     };
 
-    "org.gnome.shell.extensions.dash-to-dock" = {
+    "org/gnome/shell/extensions/dash-to-dock" = {
       dock-fixed = true;
       dash-max-icon-size = 24;
       custom-theme-shrink = true;
       extend-height = true;
       height-fraction = 0.9;
-      dock-position = "left";
+      dock-position = "LEFT";
+      click-action = "minimize";
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = ":minimize,maximize,close";
     };
 
   };
