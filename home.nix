@@ -20,20 +20,13 @@
   home.packages = with pkgs; [
     fzf
     kubectl
-    kubelogin-oidc
     git
-    git-crypt
-    gnupg
     jq
     iconv
     nodejs
     python3
     thefuck
     gnumake
-    openconnect
-    python310Packages.keyring
-    vpn-slice
-    teams-for-linux
     xclip
   ];
 
@@ -59,6 +52,7 @@
   programs.autojump.enable = true;
 
   imports = [
+    # Packages
     ./pkgs/alacritty.nix
     ./pkgs/albert.nix
     ./pkgs/direnv.nix
@@ -69,5 +63,8 @@
     ./pkgs/tmux.nix
     ./pkgs/vscode.nix
     ./pkgs/zsh.nix
+
+    # Project / Client specfic settings and packages
+    ./projects/jumbo.nix
   ];
 }
