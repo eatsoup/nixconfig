@@ -8,5 +8,7 @@
     kubelogin-oidc
     git-crypt
     gnupg
+    dbeaver
+    mongodb-compass
   ];
 }

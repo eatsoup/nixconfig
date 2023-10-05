@@ -7,7 +7,7 @@
     vimAlias = true;
     vimdiffAlias = true;
     plugins = with pkgs.vimPlugins; [
-      coc-nvim coc-git coc-highlight coc-pyright coc-rls coc-vetur coc-vimtex coc-yaml coc-html coc-json
+      coc-nvim coc-git coc-highlight coc-pyright coc-rls coc-vetur coc-vimtex coc-yaml coc-html coc-json coc-go
       ctrlp
       fzf-vim
       gruvbox
@@ -16,6 +16,7 @@
       vim-nix
       vim-surround
       commentary
+      vim-easymotion
     ];
     extraConfig = ''
       colorscheme gruvbox
@@ -49,6 +50,7 @@
       noremap <Leader>/ :Commentary<cr>
 
       " Coc settings
+      inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
       inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
       inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
@@ -61,6 +63,10 @@
           let &syntax = "json"
       endfunction
       noremap <Leader>fj :call FormatJson()<cr>
+
+      " yank and paste from clipboard
+      noremap <Leader>y "+y
+      noremap <Leader>p "+p
     '';
   };
 }

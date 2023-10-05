@@ -51,7 +51,7 @@
       alias k=kubectl
       alias force-pull='git reset --hard origin/$(git branch --show-current)'
       alias pbcopy='xclip -sel clip'
-      alias jumbovpn="IDLE_TIMEOUT=32400;sudo openconnect -u luukkemp2 --timestamp --disable-ipv6 --no-dtls --protocol fortinet --servercert pin-sha256:Lxs/cTQboPkPmpf/OnnrT7MT7aqw9q7HeWsscGxCZY0= --deflate remoteaccess.jumbo.com/jtc-split -s 'vpn-slice -K 192.168.92.0/24 $(eval echo `cat ~/.jumbo-internal-domains | tr '\n' ' '`)'"
+      alias jumbovpn="IDLE_TIMEOUT=32400;sudo openconnect -u luukkemp2 --timestamp --disable-ipv6 --no-dtls --protocol fortinet --servercert pin-sha256:ecMX4OoY9h+hQgq7qswgxpnHMMvGj0VSlZLdHNS0vpw= --deflate remoteaccess.jumbo.com/jtc-split -s 'vpn-slice -K 192.168.92.0/24 $(eval echo `cat ~/.jumbo-internal-domains | tr '\n' ' '`)'"
       source <(kubectl completion zsh)
 
       go-notebook() {
@@ -66,6 +66,8 @@
         pull="pull/new"
         xdg-open $burl/$pull/$gb &>> /dev/null
     }
+
+    export OPENAI_API_KEY=`cat ~/chatgpt.api.key`
     '';
 
     enableAutosuggestions = true;

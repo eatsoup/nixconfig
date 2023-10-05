@@ -18,6 +18,7 @@ in
       extensions = with nur.repos.rycee.firefox-addons; [
         ublock-origin
         bitwarden
+        vimium
       ];
     };
   };

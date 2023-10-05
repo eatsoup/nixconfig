@@ -63,6 +63,7 @@
     ./pkgs/tmux.nix
     ./pkgs/vscode.nix
     ./pkgs/zsh.nix
+    ./node/node.nix
 
     # Project / Client specfic settings and packages
     ./projects/jumbo.nix

@@ -37,6 +37,10 @@
       button-layout = ":minimize,maximize,close";
     };
 
+    "org/gnome/desktop/peripherals/touchpad" = {
+      click-method = "areas";
+    };
+
   };
 
   home.packages = with pkgs; [

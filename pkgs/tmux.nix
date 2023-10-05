@@ -60,6 +60,9 @@
       set-option -g status-interval 2
       set-option -g automatic-rename on
       set-option -g automatic-rename-format '#{b:pane_current_path}'
+
+      # Enable vim mode
+      set-window-option -g mode-keys vi
     '';
   };
 }
