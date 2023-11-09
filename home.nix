@@ -24,7 +24,6 @@
     jq
     iconv
     nodejs
-    python3
     thefuck
     gnumake
     xclip
@@ -59,6 +58,7 @@
     ./pkgs/firefox.nix
     ./pkgs/gnome.nix
     ./pkgs/neovim.nix
+    ./pkgs/python.nix
     ./pkgs/slack.nix
     ./pkgs/tmux.nix
     ./pkgs/vscode.nix

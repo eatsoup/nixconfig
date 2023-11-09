@@ -53,6 +53,11 @@
       inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
       inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
       inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+      nmap <Leader>gd :call CocActionAsync('jumpDefinition')<cr>
+
+      " Jump settings
+      :nmap <Leader>b <C-O>
+      :nmap <Leader>n <C-I>
 
       " $ in visual mode should jump one less
       vnoremap $ $<left>
@@ -67,6 +72,7 @@
       " yank and paste from clipboard
       noremap <Leader>y "+y
       noremap <Leader>p "+p
+
     '';
   };
 }

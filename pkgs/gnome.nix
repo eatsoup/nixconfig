@@ -30,7 +30,7 @@
       extend-height = true;
       height-fraction = 0.9;
       dock-position = "LEFT";
-      click-action = "minimize";
+      click-action = "minimize-or-previews";
     };
 
     "org/gnome/desktop/wm/preferences" = {
