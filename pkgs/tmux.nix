@@ -7,7 +7,7 @@
     enable = true;
     extraConfig = ''
       # Set terminal color
-      set -g default-terminal xterm-256color
+      set -g default-terminal screen-256color
 
       # Start index of window/pane with 1, because we're humans, not computers
       set -g base-index 1

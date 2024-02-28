@@ -2,9 +2,6 @@
 {
   programs.zsh = {
     enable = true;
-    sessionVariables = {
-      TERM = "xterm-256color";
-    };
 
     initExtra = ''
       bindkey '^ ' autosuggest-accept
@@ -68,6 +65,8 @@
     }
 
     export OPENAI_API_KEY=`cat ~/chatgpt.api.key`
+
+    alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
     '';
 
     enableAutosuggestions = true;
