@@ -18,6 +18,9 @@
     userSettings = {
       "editor.maxTokenizationLineLength" = 200000;
       "editor.renderWhitespace" = "trailing";
+      "genieai.openai.model" = "gpt-3.5-turbo";
+      "genieai.promptPrefix.customPrompt1" = "generate a docstring";
+      "genieai.promptPrefix.customPrompt1-enabled" = true;
     };
     userTasks = {
       version = "2.0.0";

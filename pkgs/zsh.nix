@@ -51,6 +51,11 @@
       alias jumbovpn="IDLE_TIMEOUT=32400;sudo openconnect -u luukkemp2 --timestamp --disable-ipv6 --no-dtls --protocol fortinet --servercert pin-sha256:ecMX4OoY9h+hQgq7qswgxpnHMMvGj0VSlZLdHNS0vpw= --deflate remoteaccess.jumbo.com/jtc-split -s 'vpn-slice -K 192.168.92.0/24 $(eval echo `cat ~/.jumbo-internal-domains | tr '\n' ' '`)'"
       source <(kubectl completion zsh)
 
+      alias debugshell311='docker run --rm -it --network=host -v /home/luuk:/home/luuk --env-file <(env) debug:python-3.11'
+      alias debugshell310='docker run --rm -it --network=host -v /home/luuk:/home/luuk --env-file <(env) debug:python-3.10'
+      alias debugshell='docker run --rm -it --network=host -v /home/luuk:/home/luuk --env-file <(env) debug:python-3.11'
+      alias jqtail="jq -R '. as "\$"line | try (fromjson) catch "\$line"'"
+
       go-notebook() {
         docker run -it -p 8888:8888 --entrypoint jupyter -v /home/luuk/Documents/notebooks:/notebooks gopherdata/gophernotes  notebook --no-browser --allow-root --ip=0.0.0.0 --notebook-dir=/notebooks --NotebookApp.custom_display_url=http://0.0.0.0:8888
       }

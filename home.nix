@@ -19,13 +19,14 @@
   # environment.
   home.packages = with pkgs; [
     fzf
-    kubectl
     git
-    jq
-    iconv
-    nodejs
-    thefuck
     gnumake
+    iconv
+    jq
+    kubectl
+    nodejs
+    psmisc
+    thefuck
     xclip
   ];
 
@@ -60,9 +61,11 @@
     ./pkgs/neovim.nix
     ./pkgs/python.nix
     ./pkgs/slack.nix
+    ./pkgs/teams.nix
     ./pkgs/tmux.nix
     ./pkgs/vscode.nix
     ./pkgs/zsh.nix
+    ./pkgs/steam.nix
     ./node/node.nix
 
     # Project / Client specfic settings and packages

@@ -7,7 +7,7 @@
     vimAlias = true;
     vimdiffAlias = true;
     plugins = with pkgs.vimPlugins; [
-      coc-nvim coc-git coc-highlight coc-pyright coc-rls coc-vetur coc-vimtex coc-yaml coc-html coc-json coc-go
+      coc-nvim coc-git coc-highlight coc-pyright coc-rls coc-vetur coc-vimtex coc-yaml coc-html coc-json coc-go coc-tsserver
       ctrlp
       fzf-vim
       gruvbox
